@@ -1,0 +1,89 @@
+<div id="header"></div>
+<div id="services-section" class="container">
+    <h2>Our Services</h2>
+    <div id="accordion">
+        <!-- Service 1 -->
+        <div class="card">
+            <div class="card-header" id="headingOne">
+                <h5 class="mb-0">
+                    <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Service One
+                    </button>
+                </h5>
+            </div>
+            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                <div class="card-body">
+                    Engage in a series of hands-on workshops that explore various artistic disciplines, from painting and sculpture to digital media and photography. 
+                    Led by local artists, these sessions are designed to inspire creativity and provide a platform for artistic expression for all skill levels.
+                </div>
+                
+            </div>
+        </div>
+        
+        <!-- Service 2 -->
+        <div class="card">
+            <div class="card-header" id="headingTwo">
+                <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                     Service Two
+                    </button>
+                </h5>
+            </div>
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                <div class="card-body">
+                    Our holistic approach to wellness includes yoga, meditation, and fitness classes, as well as nutritional workshops. 
+                    These programs aim to promote overall health and well-being, offering a sanctuary for mind, body, and soul rejuvenation.
+                </div>
+                
+            </div>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="card">
+            <div class="card-header" id="headingThree">
+                <h5 class="mb-0">
+                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                     Service Three
+                    </button>
+                </h5>
+            </div>
+            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                <div class="card-body">
+                    Stay ahead of the curve with our technology education services. From basic computer skills to advanced coding workshops, our courses are tailored to empower community members of all ages to thrive in a digital world. 
+                    We also offer special programs designed to bridge the digital divide for seniors and underrepresented groups.
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+<div id="footer"></div>
+
+<!-- Bootstrap and Custom Scripts -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header').innerHTML = data;
+            })
+            .catch(error => {
+                console.error('Error loading the header:', error);
+            });
+            fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer').innerHTML = data;
+            })
+            .catch(error => {
+                console.error('Error loading the footer:', error);
+            });
+    });
+    </script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="js/main.js"></script> <!-- If you have custom JS -->
+
+</body>
+</html>

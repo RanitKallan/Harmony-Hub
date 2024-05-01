@@ -1,0 +1,38 @@
+<div id="header"></div>
+
+    <!-- Portfolio Section -->
+    <div class="container mt-4" id="portfolio">
+        <!-- Project cards will be inserted here -->
+    </div>
+
+    <!-- Load More Button -->
+    <div class="text-center mb-4">
+        <button id="loadMore" class="btn btn-primary">Load More</button>
+    </div>
+
+<div id="footer"></div>
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header').innerHTML = data;
+            })
+            .catch(error => {
+                console.error('Error loading the header:', error);
+            });
+            fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer').innerHTML = data;
+            })
+            .catch(error => {
+                console.error('Error loading the footer:', error);
+            });
+    });
+    </script>
+<script src="js/portfolio.js"></script>
+</body>
+</html>

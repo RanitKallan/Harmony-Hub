@@ -1,0 +1,57 @@
+<div id="header"></div>
+
+<div class="container mt-5">
+    <h2>Gallery</h2>
+    <div class="row">
+
+        <div class="col-lg-4 col-md-6 mb-4">
+            <a href="./images/art.jpeg" data-lightbox="gallery" data-title="Image 1">
+                <img src="./images/art.jpeg" class="img-fluid">
+            </a>
+        </div>
+
+        <div class="col-lg-4 col-md-6 mb-4">
+            <a href="./images/gardening.jpg" data-lightbox="gallery" data-title="Image 2">
+                <img src="./images/gardening.jpg" class="img-fluid">
+            </a>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-4">
+            <a href="./images/p3.jpg" data-lightbox="gallery" data-title="Image 3">
+                <img src="./images/p3.jpg" class="img-fluid">
+            </a>
+        </div>
+    </div>
+</div>
+
+
+
+<div id="footer"></div>
+
+<!-- JavaScript -->
+<!-- Make sure the order of these scripts is correct and they are properly loaded -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        fetch('header.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('header').innerHTML = data;
+        })
+        .catch(error => {
+            console.error('Error loading the header:', error);
+        });
+        fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('footer').innerHTML = data;
+        })
+        .catch(error => {
+            console.error('Error loading the footer:', error);
+        });
+    });
+</script>
+
+<!-- Lightbox JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox-plus-jquery.min.js"></script>
+<script src="./js/gallery.js"></script>
+</body>
+</html>

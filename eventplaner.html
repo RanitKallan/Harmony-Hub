@@ -1,0 +1,44 @@
+<div id="header"></div>
+<div id="event-planning-container">
+    <h1>Plan Your Events</h1>
+    <form id="event-form">
+        <label for="event-name">Event Name:</label>
+        <input type="text" id="event-name" name="event-name" required>
+
+        <label for="event-date">Event Date:</label>
+        <input type="date" id="event-date" name="event-date" required>
+
+        <label for="event-description">Event Description:</label>
+        <textarea id="event-description" name="event-description" required></textarea>
+
+        <button type="submit">Submit</button>
+    </form>
+    <div id="events-list">Events will be listed here...</div>
+</div>
+
+
+<div id="footer"></div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header').innerHTML = data;
+            })
+            .catch(error => {
+                console.error('Error loading the header:', error);
+            });
+            fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer').innerHTML = data;
+            })
+            .catch(error => {
+                console.error('Error loading the footer:', error);
+            });
+    });
+    </script>
+<script src="./js/eventplanner.js"></script>
+<script src="./js/router.js"></script>
+

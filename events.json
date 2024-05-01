@@ -1,0 +1,27 @@
+[
+    {
+        "title": "Community Art Workshop",
+        "date": "2024-04-15",
+        "description": "Join us for a day of creativity and fun in our Community Art Workshop. Suitable for all ages and skill levels."
+    },
+    {
+        "title": "Tech for Seniors Seminar",
+        "date": "2024-04-22",
+        "description": "A seminar aimed at helping seniors become more tech-savvy. Covering basics like email, internet safety, and more."
+    },
+    {
+        "title": "Youth Soccer Camp",
+        "date": "2024-05-05",
+        "description": "A week-long soccer camp for youths aged 8-14. Focusing on teamwork, skills training, and healthy living."
+    },
+    {
+        "title": "Summer Music Festival",
+        "date": "2024-06-20",
+        "description": "Our annual music festival featuring local bands, food vendors, and activities for the whole family."
+    },
+    {
+        "title": "Gardening for Beginners",
+        "date": "2024-07-03",
+        "description": "Learn the basics of gardening in this introductory workshop. Topics include planting, soil health, and garden maintenance."
+    }
+]

@@ -1,0 +1,37 @@
+<div id="header"></div>
+
+<div class="container mt-5">
+    <h2>Upcoming Community Events</h2>
+    <div id="events-container">
+        <!-- Events will be loaded here via AJAX -->
+    </div>
+</div>
+
+<div id="footer"></div>
+
+<!-- JavaScript -->
+<!-- Make sure the order of these scripts is correct and they are properly loaded -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header').innerHTML = data;
+            })
+            .catch(error => {
+                console.error('Error loading the header:', error);
+            });
+            fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer').innerHTML = data;
+            })
+            .catch(error => {
+                console.error('Error loading the footer:', error);
+            });
+    });
+    </script>
+
+<script src="./js/events.js"></script>
+</body>
+</html>

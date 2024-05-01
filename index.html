@@ -1,0 +1,55 @@
+<div id="header"></div>
+
+        <!-- Slideshow Background -->
+    <div class="slideshow">
+        <div class="slide" style="background-image: url('./images/p.jpg');"></div>
+        <div class="slide" style="background-image: url('./images/p2.jpg');"></div>
+        <div class="slide" style="background-image: url('./images/p3.jpg');"></div>
+        <div class="centered-text">
+            <h1>Welcome to Harmony Hub</h1>
+            <p>A vibrant community center for all ages.</p>
+        </div>
+    </div>
+
+    <!-- Main Content Area -->
+    <div class="container mt-4">
+        <header class="jumbotron">
+            <h1 class="display-4">Welcome to Harmony Hub!</h1>
+            <p class="lead">A vibrant community center for all ages and backgrounds.</p>
+            <hr class="my-4">
+            <p>Explore our services, events, and community projects.</p>
+            <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+        </header>
+    </div>
+
+    <div id="footer"></div>
+
+    <!-- JavaScript -->
+    <!-- Make sure the order of these scripts is correct and they are properly loaded -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header').innerHTML = data;
+                })
+                .catch(error => {
+                    console.error('Error loading the header:', error);
+                });
+                fetch('footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer').innerHTML = data;
+                })
+                .catch(error => {
+                    console.error('Error loading the footer:', error);
+                });
+        });
+        </script>
+        
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script> 
+</body>
+</html>

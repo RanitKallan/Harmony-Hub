@@ -1,0 +1,66 @@
+<div id="header"></div>
+
+<div class="container mt-4">
+    <h1>Privacy Policy</h1>
+    <p>Last updated: [Date]</p>
+
+    <h2>1. Introduction</h2>
+    <p>Welcome to Harmony Hub. This policy outlines how we collect, use, and protect your personal information.</p>
+
+    <h2>2. Data Collection</h2>
+    <p>We collect the following types of information:</p>
+    <ul>
+        <li><strong>Personal Identification Information:</strong> Name, email address, phone number, etc.</li>
+        <li><strong>Usage Data:</strong> Information on how the services are accessed and used.</li>
+        <!-- More data types here -->
+    </ul>
+
+    <h2>3. Data Usage</h2>
+    <p>Your data is used for the following purposes:</p>
+    <ul>
+        <li>To provide and maintain our Service</li>
+        <li>To notify you about changes to our Service</li>
+        <li>To allow you to participate in interactive features of our Service</li>
+        <!-- More usage purposes here -->
+    </ul>
+
+    <h2>4. User Rights</h2>
+    <p>You have the following rights over your data:</p>
+    <ul>
+        <li><strong>Access:</strong> You have the right to request copies of your personal data.</li>
+        <li><strong>Rectification:</strong> You have the right to request that we correct any information you believe is inaccurate.</li>
+        <li><strong>Erasure:</strong> You have the right to request that we erase your personal data, under certain conditions.</li>
+        <!-- More rights here -->
+    </ul>
+
+    <h2>5. Contact Us</h2>
+    <p>If you have any questions about our Privacy Policy, please contact us at <a href="mailto:info@harmonyhub.com">info@harmonyhub.com</a>.</p>
+</div>
+
+<div id="footer"></div>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header').innerHTML = data;
+            })
+            .catch(error => {
+                console.error('Error loading the header:', error);
+            });
+            fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer').innerHTML = data;
+            })
+            .catch(error => {
+                console.error('Error loading the footer:', error);
+            });
+    });
+    </script>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

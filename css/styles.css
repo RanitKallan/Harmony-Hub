@@ -1,0 +1,659 @@
+* Reset some basic elements */
+body, h1, h2, h3, h4, h5, h6, p, ul, ol {
+    margin: 0;
+    padding: 0;
+}
+
+/* Body styling */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4; /* Light grey background */
+}
+/* Slideshow Background Styles */
+.slideshow {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    animation: slideAnimation 18s infinite;
+}
+
+.slide:nth-child(2) { animation-delay: 6s; }
+.slide:nth-child(3) { animation-delay: 12s; }
+
+@keyframes slideAnimation {
+    0% { opacity: 0; }
+    17% { opacity: 1; }
+    33% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 0; }
+}
+
+.centered-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center;
+}
+
+.centered-text h1 {
+    font-size: 3em;
+}
+
+.centered-text p {
+    font-size: 1.5em;
+}
+
+
+/* General Navbar Styling */
+.navbar {
+    background-color:white; /* Change the background color */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+    position: fixed; /* Fix the navbar to the top */
+    top: 0; /* Position at the very top of the page */
+    left: 0; /* Align to the left side of the page */
+    width: 100%; /* Navbar should span the full width */
+    z-index: 1000; /* Ensure the navbar stays on top of other elements */
+}
+
+/* Add padding to the body to prevent content from being hidden under the navbar */
+body {
+    padding-top: 80px; /* Adjust this value based on the height of your navbar */
+}
+
+.navbar-brand {
+    color: black !important; /* Change brand text color */
+}
+
+.navbar-brand:hover {
+    color:black !important; /* Change brand text color on hover */
+}
+
+/* Navbar Links Styling */
+.navbar-nav .nav-link {
+    color: black !important; /* Change link color */
+}
+
+.navbar-nav .nav-link:hover {
+    color: #d4d4d4 !important; /* Change link color on hover */
+}
+
+/* Active Link Styling */
+.navbar-nav .nav-item.active .nav-link {
+    color:black !important; /* Change color for active link */
+}
+
+/* Navbar Toggler (Hamburger Menu) Styling */
+.navbar-toggler {
+    border-color: #fff; /* Change toggler border color */
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 0.7)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    /* Customize hamburger icon color */
+}
+
+.navbar .form-inline {
+    margin-right: 10px;
+}
+
+.navbar .btn-outline-primary {
+    margin-left: 10px;
+}
+
+/* Search function */
+
+mark {
+    background-color: yellow;
+    color: black;
+}
+
+
+/* Responsive Behavior */
+@media (max-width: 991px) {
+    .navbar-nav {
+        background-color: #0056b3; /* Change background color for collapsed menu */
+    }
+}
+
+
+/* Jumbotron Header */
+.jumbotron {
+    background: #333 url('path_to_your_image.jpg') no-repeat center center; 
+    color: #fff;
+    background-size: cover;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+.footer-nav {
+    text-align: center;
+    margin-bottom: 1rem; /* Spacing below the footer-nav */
+}
+
+.footer-nav a {
+    color: #007bff; /* Link color */
+    margin: 0 10px; /* Spacing around links */
+    text-decoration: none; /* Removes underline from links */
+}
+
+.footer-nav a:hover {
+    text-decoration: underline; /* Underline on hover for better visibility */
+}
+
+
+/* Footer */
+footer.footer {
+    background-color: #007bff;
+    color: black;
+    text-align: center;
+    padding: 10px 0;
+}
+.footer {
+    position: bottom;
+    background-color: #f8f9fa; /* Adjust the background color as needed */
+    color: #5a5a5a; /* Text color */
+}
+
+.footer h5 {
+    color: black; /* Heading color */
+}
+
+
+.footer ul {
+    padding-left: 0; /* Remove default padding */
+    list-style-type: none; /* Remove default list style */
+}
+
+.footer a {
+    color: black; /* Link color */
+    text-decoration: none; /* Optional: removes underline from links */
+}
+
+.footer a:hover {
+    text-decoration: underline; /* Optional: adds underline on hover */
+}
+
+.social-media a {
+    margin-right: 10px; /* Spacing between icons */
+}
+
+.social-media img {
+    width: 32px; /* Adjust size of social media icons */
+    height: auto;
+}
+
+
+/* Custom Button Styling */
+.btn-primary {
+    background-color: #0069d9; /* Slightly different primary color */
+    border-color: #0062cc;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+/* Portfolio Styles */
+.portfolio {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+
+/* Portfolio Section */
+.container {
+    max-width: 1200px; /* Set max width for the container */
+    margin: auto;
+    padding: 20px;
+}
+
+/* Project Cards */
+.project-card {
+    background: #fff; /* White background for the cards */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow */
+    overflow: hidden; /* Ensures the content fits within the borders */
+    margin-bottom: 30px; /* Space between cards */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.project-card:hover {
+    transform: translateY(-5px); /* Slight lift effect on hover */
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15); /* Increased shadow on hover */
+}
+
+.project-card img {
+    width: 50%; /* Full width images */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.project-card h5 {
+    font-size: 1.2em; /* Title size */
+    margin: 15px; /* Spacing around title */
+}
+
+.project-card p {
+    padding: 0 15px 15px; /* Padding for description */
+    font-size: 1em; /* Description text size */
+    line-height: 1.5; /* Line height for readability */
+}
+
+/* Load More Button */
+#loadMore {
+    background-color: #007bff; /* Bootstrap primary color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#loadMore:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+/* Responsive Grid Layout for Cards */
+@media (min-width: 768px) {
+    .project-card {
+        float: left;
+        width: 48%; /* Two cards per row */
+        margin-left: 1%;
+        margin-right: 1%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .project-card {
+        width: 31%; /* Three cards per row */
+        margin: 1%;
+    }
+}
+
+/* Services Section General Styling */
+#services-section {
+    padding: 2rem 0;
+}
+
+#services-section h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* Card Styling */
+.card {
+    margin-bottom: 1rem;
+    border: none; /* Remove borders */
+}
+
+.card-header {
+    background-color: #007bff; /* Primary color */
+    color: white; /* Text color */
+    padding: 0.75rem 1.25rem;
+    border: none; /* Remove borders */
+    cursor: pointer; /* Indicates the header is clickable */
+}
+
+.card-header:hover {
+    background-color: #0056b3; /* Darken color slightly on hover */
+}
+
+/* Service Icon Styling */
+.service-icon {
+    width: 30px; /* Size of icons */
+    height: auto;
+    margin-right: 0.5rem;
+    vertical-align: middle;
+}
+
+/* Button Styling */
+.btn-link {
+    color: white; /* Button text color */
+    text-decoration: none; /* Remove underline */
+    font-size: 1.25rem; /* Size of the text */
+}
+
+.btn-link:hover {
+    color: #e2e6ea; /* Lighten text slightly on hover */
+}
+
+/* Card Body Styling */
+.card-body {
+    background-color: #f8f9fa; /* Light background for content */
+    line-height: 1.5; /* Space between lines */
+    border-top: 1px solid rgba(0,0,0,.125); /* Add a border to the top */
+}
+
+/* Accordion collapse link */
+.collapsed {
+    color: #e2e6ea; /* Lighten text for collapsed items */
+}
+
+.collapsed:hover {
+    color: white; /* Text color on hover for collapsed items */
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    #services-section {
+        padding: 3rem 0;
+    }
+}
+
+.team-member {
+    text-align: center;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
+
+.team-member img {
+    width: 150px; /* Adjust the size as needed */
+    height: 150px; /* Make sure width and height are the same for a perfect circle */
+    border-radius: 50%; /* This creates the circular shape */
+    object-fit: cover; /* Ensures the image covers the area nicely */
+    margin-bottom: 15px; /* Spacing below the image */
+}
+
+.team-member h3 {
+    margin-bottom: 5px;
+    font-size: 1.5em;
+}
+
+.team-member p {
+    font-size: 1em;
+    color: #555;
+}
+.modal-body img{
+    max-height: 50%;
+}
+
+/* General Styling for the Contact Section */
+.contact-section {
+    max-width: 500px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Contact Form Styling */
+#contactForm {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#contactForm .form-group {
+    margin-bottom: 15px;
+}
+
+#contactForm .form-control {
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+}
+
+#contactForm button[type="submit"] {
+    width: 20%;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: none;
+}
+
+/* Contact Information Styling */
+.contact-info {
+    background-color: #fff;
+    padding: 20px;
+    margin-top: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.contact-info h3 {
+    margin-bottom: 15px;
+}
+
+.contact-info p {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.contact-info p strong {
+    color: #007bff;
+}
+
+#feedback-form-container {
+    max-width: 500px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#feedback-form-container h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#feedback-form-container .form-group {
+    margin-bottom: 15px;
+}
+
+#feedback-form-container .form-control {
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+}
+
+#feedback-form-container .btn {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: none;
+}
+
+
+
+
+/* Login */
+.container-login {
+    width: 100%;
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.container-login h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.container-login .form-group {
+    margin-bottom: 15px;
+}
+
+.container-login .form-control {
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+    padding: 10px;
+    font-size: 1rem;
+}
+
+.container-login .btn {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: none;
+    margin-top: 10px;
+}
+
+.container-login .registration-link {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.container-login .registration-link:hover {
+    text-decoration: underline;
+}
+
+
+/* Register */
+.container-registration {
+    width: 100%;
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.container-registration h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.container-registration .form-group {
+    margin-bottom: 15px;
+}
+
+.container-registration .form-control {
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+    padding: 10px;
+    font-size: 1rem;
+}
+
+.container-registration .btn {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: none;
+    margin-top: 10px;
+}
+
+.container-registration .login-link {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.container-registration .login-link:hover {
+    text-decoration: underline;
+}
+
+
+/* Events */
+.event {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f8f9fa;
+}
+
+.event h3 {
+    color: #007bff;
+}
+
+.event p {
+    color: #333;
+}
+
+/* Gallery */
+
+.img-fluid {
+    margin-bottom: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+
+/* Event Planning Form Styling */
+#event-planning-container {
+    background-color: #fff;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+#event-planning-container h1 {
+    color: #333;
+}
+
+#event-form {
+    display: flex;
+    flex-direction: column;
+}
+
+#event-form label {
+    margin-bottom: 5px;
+}
+
+#event-form input, #event-form textarea {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#event-form button {
+    cursor: pointer;
+    padding: 10px 20px;
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#event-form button:hover {
+    background-color: #004494;
+}
+
+/* Events List Styling */
+#events-list {
+    margin-top: 20px;
+}
+
+.event {
+    background-color: #e9ecef;
+    border: 1px solid #dee2e6;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.event h3 {
+    margin-top: 0;
+}
